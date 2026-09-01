@@ -1,4 +1,4 @@
-from app.schemas.task import CreateTask
+from app.schemas.task import CreateTask,UpdateTask
 from fastapi.responses import JSONResponse
 from fastapi import HTTPException   
 
@@ -43,6 +43,29 @@ def create_task(task_id : int , task : CreateTask):
     sample_db[task_id] = task.model_dump()
     
     return {"status" : "Done! Here's your receipt", "task" : sample_db[task_id]}
+
+def update_task(task_id : int, task : UpdateTask):
+    if task_id not in sample_db:
+        raise HTTPException(
+            status_code = 404,
+            detail=f"Task {task_id} does not exist"
+        )
+
+    sample_db[task_id].update(
+        task.model_dump(exclude_unset=True)
+    )
+
+    return {"status" : "Updated Successfully!", "task" : sample_db[task_id]}
+
+def delete_task(task_id : int):
+    if task_id not in sample_db:
+        raise HTTPException(
+            status_code = 404,
+            detail= f"Task {task_id} does not exist"
+        )
+    
+    del sample_db[task_id]
+    return {"status" : "Deleted Successfully!"}
 
 
 
