@@ -17,6 +17,9 @@ cd my-project
 pip install uv
 
 # Running the Application
+
+uvicorn app.main:app --reload
+
 uv run fastapi dev
 
 The server will run at 
