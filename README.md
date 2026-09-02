@@ -40,3 +40,17 @@ curl -i http:/localhost:8000/
 Fastapi server runs successfully on localhost:8000
 GET / returns HTTP status code 200
 The response contains the hello message
+
+# Swagger UI
+
+![Swagger UI](screenshots/swagger.png)
+
+![Create Task](Create_Task.png)
+
+![List Tasks](List_Tasks.png)
+
+![Update Task](Update_Task.png)
+
+![Delete Task](Delete_Task.png)
+
+![All Tasks](Tasks.png)
