@@ -36,6 +36,10 @@ The endpoint can also be tested using curl:
 
 curl -i http:/localhost:8000/
 
+To get the Task list use curl:
+
+curl -i http:/localhost:8000/tasks
+
 # Checkpoint
 Fastapi server runs successfully on localhost:8000
 GET / returns HTTP status code 200
