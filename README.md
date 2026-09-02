@@ -45,12 +45,12 @@ The response contains the hello message
 
 ![Swagger UI](screenshots/swagger.png)
 
-![Create Task](Create_Task.png)
+![Create Task](screenshots/Create_Task.png)
 
-![List Tasks](List_Tasks.png)
+![List Tasks](screenshots/List_Tasks.png)
 
-![Update Task](Update_Task.png)
+![Update Task](screenshots/Update_Task.png)
 
-![Delete Task](Delete_Task.png)
+![Delete Task](screenshots/Delete_Task.png)
 
-![All Tasks](Tasks.png)
+![All Tasks](screenshots/Tasks.png)
